@@ -40,11 +40,11 @@ body {
   line-height: 1.2em;
 }
 a {
-  color: #d9411e;
+  color: #0099cb;
   text-decoration: none;
 }
 a:hover {
-  color: #ff5a09;
+  color: #22bbed;
 }
 hr {
   color: #eeeeee;
@@ -80,8 +80,9 @@ aside div h1 {
   margin: 15px 0 5px 0;
 }
 aside div p {
-  margin: 0 0 15px 0;
+  margin: 0 6% 15px;
   font-size: .92em;
+  text-align: left;
 }
 aside nav ul li {
   display: inline;
@@ -106,6 +107,10 @@ main nav :first-child {
 main .pagination {
   margin: 4% 8% 2% 8%;
 }
+main .pagination::after {
+  clear: both;
+  content: ' ';
+}
 main .social-share p {
   font-size: .8em;
 }
@@ -123,7 +128,8 @@ main article header p {
 main article code,
 main article kbd,
 main article samp,
-main article pre {
+main article pre,
+main article tt.docutils.literal {
   font-family: 'Source Code Pro', monospace;
 }
 main article blockquote,
@@ -131,8 +137,18 @@ main article pre {
   background-color: rgba(128, 128, 128, 0.05);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-left: 8px solid rgba(128, 128, 128, 0.075);
+  border-left: 5px solid rgba(128, 128, 128, 0.075);
   border-left-width: 10px;
+  overflow: auto;
+  padding: 0.8em;
+}
+main article tt.docutils.literal {
+  display: block;
+  background: #EEE none repeat scroll 0px 0px;
+  border-left: 5px solid #0099CB;
+  border-radius: 0px 5px 5px 0px;
+  margin: 10px 0px;
+  padding: 0.8em;
 }
 main article blockquote {
   padding: 10px 20px;
@@ -199,7 +215,7 @@ main footer p {
   font-size: 11px;
 }
 .tag-cloud a {
-  background-color: #d9411e;
+  background-color: #0099cb;
   padding: .2em .6em .2em;
   font-size: .74em;
   line-height: 1;
@@ -210,10 +226,10 @@ main footer p {
   border-radius: .25em;
 }
 .tag-cloud a:hover {
-  background-color: #ff5a09;
+  background-color: #22bbed;
 }
 a.btn {
-  background-color: #d9411e;
+  background-color: #0099cb;
   padding: .4em .6em;
   font-size: .9em;
   line-height: 1;
@@ -224,7 +240,7 @@ a.btn {
   border-radius: .25em;
 }
 a.btn:hover {
-  background-color: #ff5a09;
+  background-color: #22bbed;
 }
 .center {
   text-align: center;
@@ -274,6 +290,15 @@ ul.social a.sc-google {
 ul.social a.sc-pinterest {
   background-color: #c92619;
 }
+ul.social a.sc-lastfm {
+  background-color: #dc1a23;
+}
+ul.social a.sc-flickr {
+  background-color: #ff0084;
+}
+ul.social a.sc-foursquare {
+  background-color: #44a8e0;
+}
 ul.social a.sc-linkedin {
   background-color: #3371b7;
 }
@@ -315,7 +340,7 @@ ul.social a.sc-envelope-o {
   main {
     width: 75%;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;

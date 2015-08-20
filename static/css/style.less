@@ -1,5 +1,7 @@
 @orange: #D9411E;
 @light-orange: #FF5A09;
+@blue: #0099CB;
+@light-blue: #22BBED;
 @white:  #ffffff;
 @grey: #333333;
 @light-grey:  #eeeeee;
@@ -58,12 +60,12 @@ body {
 }
 
 a {
-  color: @orange;
+  color: @blue;
   text-decoration: none;
 }
 
 a:hover {
-  color: @light-orange;
+  color: @light-blue;
 }
 
 hr {
@@ -106,8 +108,9 @@ aside {
     }
 
     p {
-      margin: 0 0 15px 0;
+      margin: 0 6% 15px;
       font-size: .92em;
+      text-align: left;
     }
   }
 
@@ -145,6 +148,11 @@ main {
     margin: 4% 8% 2% 8%;
   }
 
+  .pagination::after {
+    clear: both;
+    content: ' ';
+  }
+
   .social-share {
     p {
       font-size: .8em;
@@ -165,7 +173,7 @@ main {
       }
     }
 
-    code, kbd, samp, pre {
+    code, kbd, samp, pre, tt.docutils.literal {
       font-family: @mono;
     }
 
@@ -173,8 +181,19 @@ main {
       background-color: rgba(128,128,128,0.05);
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      border-left: 8px solid rgba(128,128,128,0.075);
+      border-left: 5px solid rgba(128,128,128,0.075);
       border-left-width: 10px;
+      overflow: auto;
+      padding: 0.8em;
+    }
+
+    tt.docutils.literal {
+      display:block;
+      background: #EEE none repeat scroll 0px 0px;
+      border-left: 5px solid #0099CB;
+      border-radius: 0px 5px 5px 0px;
+      margin: 10px 0px;
+      padding: 0.8em;
     }
 
     blockquote {
@@ -255,7 +274,7 @@ main {
 
 .tag-cloud {
   a {
-    background-color: @orange;
+    background-color: @blue;
     padding: .2em .6em .2em;
     font-size: .74em;
     line-height: 1;
@@ -267,12 +286,12 @@ main {
   }
 
   a:hover {
-    background-color: @light-orange;
+    background-color: @light-blue;
   }
 }
 
 a.btn {
-  background-color: @orange;
+  background-color: @blue;
   padding: .4em .6em;
   font-size: .9em;
   line-height: 1;
@@ -284,7 +303,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background-color: @light-orange;
+  background-color: @light-blue;
 }
 
 .center {
@@ -343,6 +362,18 @@ ul.social {
 
   a.sc-pinterest {
     background-color: #c92619;
+  }
+
+  a.sc-lastfm {
+    background-color: #dc1a23;
+  }
+
+  a.sc-flickr {
+    background-color: #ff0084;
+  }
+
+  a.sc-foursquare {
+    background-color: #44a8e0;
   }
 
   a.sc-linkedin {
@@ -404,7 +435,7 @@ ul.social {
   main {
     width: 75%;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
