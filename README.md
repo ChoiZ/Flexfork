@@ -1,4 +1,6 @@
-# Flex
+# Flexfork
+
+Theme based on [Flex](https://github.com/alexandrevicenzi/Flex) by [Alexandre Vicenzi](https://github.com/alexandrevicenzi)
 
 A minimalist [Pelican](http://blog.getpelican.com/) theme.
 
@@ -13,7 +15,6 @@ A minimalist [Pelican](http://blog.getpelican.com/) theme.
 
 ## Integrations
 
-- AddThis
 - Disqus
 - Google Analytics
 - Google Tag Manager
@@ -89,10 +90,13 @@ A set of icons have custom background, for this you must follow the names below:
 
 - envelope-o (for email)
 - facebook
+- flickr
+- foursquare
 - github
 - github-alt
 - google
 - linkedin
+- lastfm
 - pinterest
 - rss
 - twitter
@@ -101,8 +105,8 @@ A set of icons have custom background, for this you must follow the names below:
 Example:
 
 ```python
-SOCIAL = (('linkedin', 'https://br.linkedin.com/in/alexandrevicenzi/en'),
-          ('github', 'https://github.com/alexandrevicenzi'),)
+SOCIAL = (('linkedin', 'https://br.linkedin.com/in/choiz'),
+          ('github', 'https://github.com/choiz'),)
 ```
 
 If you need more icons, you will need to add a custom background to keep all icons similar.
@@ -123,13 +127,9 @@ If the article has `Summarize: True` metadata, the default article summary is sh
 
 If you want to replace Pygments theme (default is GitHub) take a look at [Pygments Docs](http://pygments.org/) and replace `pygments.min.css`.
 
-## Live example
+## Fork
 
-You can see how things looks like [here](https://blog.alexandrevicenzi.com/flex-pelican-theme.html).
-
-I'm using Flex in my [personal blog](http://blog.alexandrevicenzi.com/).
-
-![Screenshot](https://github.com/alexandrevicenzi/Flex/blob/master/screenshot.png)
+Based on original theme by [Alexandre Vicenzi](https://github.com/alexandrevicenzi/Flex)
 
 ## License
 
