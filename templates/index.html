@@ -6,21 +6,21 @@
   <header>
     <h2><a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a></h2>
     <p>
-      Posted on {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> &#8226;
-      {% if article.tags %}Tagged with
+      Posté le {{ article.locale_date }} &#8226;
+      {% if article.tags %}Tags :
       {% for tag in article.tags %}
       <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
       {% endfor %}
       {% endif %}
       {% if DISQUS_SITENAME %}
-      &#8226; <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Leave a comment</a>
+      &#8226; <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Laissez un commentaire</a>
       {% endif %}
     </p>
   </header>
   <div>
     {% if summarise or article.metadata['summary'] or article.metadata['summarize'] %}
       {{ article.summary }}
-      <a class="btn" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">Continue reading</a>
+      <a class="btn" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">Lire la suite</a>
     {% else %}
       {{ article.content }}
     {% endif %}

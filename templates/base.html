@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
-  {% if USE_LESS %}
-  <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/theme/css/style.less">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
-  {% else %}
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.min.css">
-  {% endif %}
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.min.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
   {% if FEED_ALL_ATOM %}
@@ -20,7 +15,6 @@
   <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon">
   <link rel="icon" href="{{ FAVICON }}" type="image/x-icon">
   {% endif %}
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="{{ ROBOTS }}" />
@@ -43,20 +37,21 @@
         {% endif %}
       </a>
       <h1><a href="{{ SITEURL }}">{{ SITETITLE }}</a></h1>
-      <p>{{ SITESUBTITLE }}</p>
       <nav>
         <ul class="list">
           {% for page in pages|sort(attribute='title') %}
           <li><a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a></li>
           {% endfor %}
           {% for name, link in LINKS %}
-          <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+          <li><a href="{{ link }}">{{ name }}</a></li>
           {% endfor %}
         </ul>
       </nav>
+      <p>{{ SITESUBTITLE }}</p>
+      <p>{{ SITESUBTITLE2 }}</p>
       <ul class="social">
         {% for name, link in SOCIAL %}
-        <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+        <li><a class="sc-{{ name }}" href="{{ link }}"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
       </ul>
     </div>
@@ -85,15 +80,12 @@
         {% include "partial/cc_license.html" %}
       {% else %}
       <p>&copy; {{ AUTHOR }} {{ COPYRIGHT_YEAR }}</p>
-      {% include "partial/flex.html" %}
+      {% include "partial/flexfork.html" %}
       {% include "partial/statuscake.html" %}
       {% endif %}
     </footer>
   </main>
   {% include "partial/ga.html" %}
-  {% if ADD_THIS_ID %}
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADD_THIS_ID }}" async="async"></script>
-  {% endif %}
   {% block additional_js %}{% endblock %}
 </body>
 </html>
