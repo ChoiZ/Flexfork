@@ -4,12 +4,12 @@ var gulp = require('gulp'),
     minify = require('gulp-minify-css');
 
 gulp.task('minify', function () {
-  return gulp.src('./static/css/style.css')
-    .pipe(minify())
-    .pipe(rename({
-        extname: '.min.css'
-    }))
-    .pipe(gulp.dest('./static/css'));
+    return gulp.src('./static/css/style.css')
+        .pipe(minify())
+        .pipe(rename({
+            extname: '.min.css'
+        }))
+        .pipe(gulp.dest('./static/css'));
 });
 
 gulp.task('less', function () {
