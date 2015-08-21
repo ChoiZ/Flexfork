@@ -130,25 +130,22 @@ main article kbd,
 main article samp,
 main article pre,
 main article tt.docutils.literal {
+  border-radius: 0px 5px 5px 0px;
+  display: block;
   font-family: 'Source Code Pro', monospace;
+  font-size: 0.8em;
+  margin: 10px 0px;
+  overflow: auto;
+  padding: 0.8em;
 }
 main article blockquote,
 main article pre {
   background-color: rgba(128, 128, 128, 0.05);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-left: 5px solid rgba(128, 128, 128, 0.075);
-  border-left-width: 10px;
-  overflow: auto;
-  padding: 0.8em;
+  border-left: 5px solid rgba(128, 128, 128, 0.75);
 }
 main article tt.docutils.literal {
-  display: block;
   background: #EEE none repeat scroll 0px 0px;
   border-left: 5px solid #0099CB;
-  border-radius: 0px 5px 5px 0px;
-  margin: 10px 0px;
-  padding: 0.8em;
 }
 main article blockquote {
   padding: 10px 20px;
@@ -156,8 +153,6 @@ main article blockquote {
   font-size: 1.1em;
 }
 main article pre {
-  padding: 4px;
-  font-size: .9em;
   overflow-x: auto;
 }
 main article samp {
