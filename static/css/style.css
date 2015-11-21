@@ -317,7 +317,7 @@ ul.social a.sc-envelope-o {
 }
 @media screen and (min-width: 768px) {
   aside {
-    width: 20%;
+    width: 30%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -338,20 +338,11 @@ ul.social a.sc-envelope-o {
     width: 70%;
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 30%;
     overflow-x: hidden;
     overflow-y: hidden;
   }
   main article ul.list li {
     padding: 2px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  aside {
-    width: 25%;
-  }
-  main {
-    width: 75%;
-    left: 25%;
   }
 }

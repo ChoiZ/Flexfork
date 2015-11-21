@@ -3,6 +3,12 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     minify = require('gulp-minify-css');
 
+gulp.task('less', function () {
+    return gulp.src('./static/css/style.less')
+        .pipe(less())
+        .pipe(gulp.dest('./static/css'));
+});
+
 gulp.task('minify', function () {
     return gulp.src('./static/css/style.css')
         .pipe(minify())
@@ -12,10 +18,4 @@ gulp.task('minify', function () {
         .pipe(gulp.dest('./static/css'));
 });
 
-gulp.task('less', function () {
-    return gulp.src('./static/css/style.less')
-        .pipe(less())
-        .pipe(gulp.dest('./static/css'));
-});
-
-gulp.task('default', ['less', 'minify']);
+gulp.task('default', ['minify']);
