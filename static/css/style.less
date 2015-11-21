@@ -88,10 +88,12 @@ aside {
 
   a {
     color: @white;
+    text-decoration: underline;
   }
 
   a:hover {
     color: @light-grey;
+    text-decoration: none;
   }
 
   div {
@@ -402,7 +404,7 @@ ul.social {
 
 @media screen and (min-width: 768px) {
   aside {
-    width: 25%;
+    width: 20%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -428,10 +430,10 @@ ul.social {
   }
 
   main {
-    width: 75%;
+    width: 70%;
     position: absolute;
     top: 10%;
-    left: 25%;
+    left: 20%;
     overflow-x: hidden;
     overflow-y: hidden;
 
@@ -442,5 +444,20 @@ ul.social {
         }
       }
     }
+  }
+}
+
+//
+// Desktop Wide
+//
+
+@media screen and (min-width: 1024px) {
+  aside {
+    width: 25%;
+  }
+
+  main {
+    width: 75%;
+    left: 25%;
   }
 }
