@@ -40,12 +40,11 @@ body {
   line-height: 1.2em;
 }
 a {
-  color: #0099cb;
-  text-decoration: underline;
+  color: #0099CB;
+  text-decoration: none;
 }
 a:hover {
-  color: #22bbed;
-  text-decoration: none;
+  color: #22BBED;
 }
 hr {
   color: #eeeeee;
@@ -211,7 +210,7 @@ main footer p {
   font-size: 11px;
 }
 .tag-cloud a {
-  background-color: #0099cb;
+  background-color: #0099CB;
   padding: .2em .6em .2em;
   font-size: .74em;
   line-height: 1;
@@ -222,10 +221,10 @@ main footer p {
   border-radius: .25em;
 }
 .tag-cloud a:hover {
-  background-color: #22bbed;
+  background-color: #22BBED;
 }
 a.btn {
-  background-color: #0099cb;
+  background-color: #0099CB;
   padding: .4em .6em;
   font-size: .9em;
   line-height: 1;
@@ -236,7 +235,7 @@ a.btn {
   border-radius: .25em;
 }
 a.btn:hover {
-  background-color: #22bbed;
+  background-color: #22BBED;
 }
 .center {
   text-align: center;
