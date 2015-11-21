@@ -41,10 +41,11 @@ body {
 }
 a {
   color: #0099cb;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   color: #22bbed;
+  text-decoration: none;
 }
 hr {
   color: #eeeeee;
