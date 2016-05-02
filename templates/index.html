@@ -4,7 +4,7 @@
 {% for article in articles_page.object_list %}
 <article>
   <header>
-    <h2><a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a></h2>
+    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
     <p>
       Posté le {{ article.locale_date }} &#8226;
       {% if article.tags %}Tags :
@@ -20,7 +20,7 @@
   <div>
     {% if summarise or article.metadata['summary'] or article.metadata['summarize'] %}
       {{ article.summary }}
-      <a class="btn" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">Lire la suite</a>
+      <a class="btn" href="{{ SITEURL }}/{{ article.url }}">Lire la suite</a>
     {% else %}
       {{ article.content }}
     {% endif %}
