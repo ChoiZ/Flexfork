@@ -133,7 +133,6 @@ main article samp,
 main article pre,
 main article tt.docutils.literal {
   border-radius: 0px 5px 5px 0px;
-  display: block;
   font-family: 'Source Code Pro', monospace;
   font-size: 0.8em;
   margin: 10px 0px;
