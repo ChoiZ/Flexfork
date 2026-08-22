@@ -345,3 +345,7 @@ ul.social a.sc-envelope-o {
     padding: 2px;
   }
 }
+
+.comments-loading{display:flex;align-items:center;gap:.6em;color:#888;font-size:.9em;padding:1em 0;}
+.comments-spinner{width:1.1em;height:1.1em;border:2px solid #ddd;border-top-color:#0099CB;border-radius:50%;display:inline-block;animation:comments-spin .8s linear infinite;}
+@keyframes comments-spin{to{transform:rotate(360deg);}}

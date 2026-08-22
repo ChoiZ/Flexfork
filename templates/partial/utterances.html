@@ -1,4 +1,10 @@
-<div id="comments"><h2>Commentaires</h2></div>
+<div id="comments">
+  <h2>Commentaires</h2>
+  <div id="comments-loading" class="comments-loading" aria-live="polite">
+    <span class="comments-spinner" aria-hidden="true"></span>
+    Chargement des commentaires…
+  </div>
+</div>
 <script src="https://utteranc.es/client.js"
         repo="ChoiZ/comments-on-choiz.fr"
         issue-term="url"
@@ -6,4 +12,24 @@
         theme="github-light"
         crossorigin="anonymous"
         async>
+</script>
+<script>
+(function () {
+  var loader = document.getElementById('comments-loading');
+  if (!loader) return;
+  var done = false;
+  function hide() { if (done) return; done = true; loader.style.display = 'none'; }
+  // utterances émet un postMessage quand les commentaires sont rendus
+  window.addEventListener('message', function (e) {
+    if (e.origin === 'https://utteranc.es') hide();
+  });
+  // fallback : masque dès que l'iframe utterances est chargée
+  var obs = new MutationObserver(function () {
+    var f = document.querySelector('.utterances-frame');
+    if (f) { f.addEventListener('load', hide); obs.disconnect(); }
+  });
+  obs.observe(document.body, { childList: true, subtree: true });
+  // fallback ultime : ne jamais rester bloqué
+  setTimeout(hide, 10000);
+})();
 </script>
