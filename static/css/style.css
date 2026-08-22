@@ -35,9 +35,9 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #242121;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.02em;
-  line-height: 1.2em;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 1.06em;
+  line-height: 1.65em;
 }
 a {
   color: #0099CB;
@@ -133,7 +133,7 @@ main article samp,
 main article pre,
 main article tt.docutils.literal {
   border-radius: 0px 5px 5px 0px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 0.8em;
   margin: 10px 0px;
   overflow: auto;
