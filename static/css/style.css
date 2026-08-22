@@ -176,11 +176,20 @@ main article kbd {
 main article code {
   font-size: .8em;
   white-space: nowrap;
-  color: #c25;
+  color: #333;
   padding: 1px 3px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 3px;
+}
+main article pre code,
+main article div.highlight code {
+  white-space: pre;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
 }
 main article .comment-count {
   font-size: .8em;
